@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import './App.css';
 
@@ -39,10 +40,10 @@ export class App extends Component {
     !== id)] });
   }
 
-
   render() {
     return (
       <div className='App'>
+       <Header />
        <Todos 
         todos={this.state.todos} 
         markComplete={this.markComplete} 
@@ -52,5 +53,7 @@ export class App extends Component {
     );
   }
 }
+  
+
 
 export default App
